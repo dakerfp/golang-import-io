@@ -9,3 +9,5 @@ Use Go's present tool to view the slides
 go get golang.org/x/tools/present
 present
 ```
+
+Use `go run` to try any Go example.
