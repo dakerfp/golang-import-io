@@ -1,0 +1,169 @@
+import "io"
+How io works in Golang
+15:04 20 Sep 2017
+Tags: go, golang, io
+
+Daker Pinheiro
+Software Engineer
+dfp@cin.ufpe.br
+http://dakerfp.com
+@dakerfp
+
+* whoami
+
+.image gopherme.png 300 300
+.link http://gopherize.me
+
+* Golang 101
+
+- Compiled
+- Imperative
+- Structured
+- Static, strong & inferred typing
+- Needs a runtime for GC and concurrency
+- POSIX, Windows, Plan 9 and growing
+- Async in language, not libraries
+
+* hello world
+
+.code hellowrong.go
+
+* hello world
+
+.code hello0.go
+
+* hello world
+
+.code hello1.go
+
+* import "io"
+
+.code io.go
+
+* UNIX like!
+
+.code io.c
+
+* Copy
+
+.code hello.go /START OMIT/,/END OMIT/
+
+* Copy
+
+.code hello2.go
+
+* Copy
+
+.code copy.go
+
+* io abstractions in standard library
+
+- os
+- os/exec
+- net
+- net/http
+- compress
+- crypto
+- encoding
+- strings
+- fmt
+- html/template, text/template
+- bufio
+- ...
+
+* Composability
+
+.code compose.go /START OMIT/,/END OMIT/
+
+* Composability
+
+.code compose-gzip.go /START OMIT/,/END OMIT/
+
+* Implementing a writer
+
+.code counter.go
+
+* Implementing a reader
+
+.code censor.go /START OMIT/,/END OMIT/
+
+* Implementing a reader
+
+.code censor.go /START MAIN/,/END MAIN/
+
+* Think twice
+
+- ioutil.ReadFile
+- ioutil.ReadAll
+- io.Pipe
+- io.Copy !
+- Concurrent Read/Write
+
+* Async IO
+
+.code async.go /START OMIT/,/END OMIT/
+
+* Async IO
+
+- Go's approach to async is blocking IO at goroutine level, not process!
+- goroutine ~= coroutine ~= green threads
+- Goroutine
+
+* Async IO in POSIX world
+
+.code epoll.go
+
+* Async IO in Python world
+
+.code asyncio.py
+
+* Async IO
+
+.code async2.go /START OMIT/,/END OMIT/
+
+* Side quest (goroutines)
+
+.code async-trivia.go /START OMIT/,/END OMIT/
+
+* Async IO
+
+.code async3.go /START OMIT/,/END OMIT/
+
+* Async IO
+
+.code async4.go /START OMIT/,/END OMIT/
+
+* Async IO
+
+.code async5.go /START OMIT/,/END OMIT/
+
+* Async IO
+
+.code async5.go /START MAIN/,/END MAIN/
+
+* Async IO
+
+.code async6.go /START OMIT/,/END OMIT/
+
+* Don't forget the POT (plain old tricks)
+
+- syscall
+- syscall.Sendfile
+- io.WriterTo
+- http.ServeFile
+- http.ServeContent
+
+* Reading list
+
+.link https://c9x.me/articles/gthreads/code0.html Green threads explained
+.link https://lwan.ws/ lwan web server
+
+* Reading list
+
+.link https://http://tour.golang.org/ "A tour of Go"
+.link https://golang.org/doc/effective_go.html "Effective Go"
+.link https://gobyexample.com "Go by example"
+Advanced UNIX Programming
+
+.image unix.jpeg
+
