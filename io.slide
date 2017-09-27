@@ -9,10 +9,6 @@ dfp@cin.ufpe.br
 http://dakerfp.com
 @dakerfp
 
-* whoami
-
-.image gopherme.png 300 300
-.link http://gopherize.me
 
 * Golang 101
 
@@ -101,13 +97,13 @@ http://dakerfp.com
 
 * Async IO
 
-.code async.go /START OMIT/,/END OMIT/
-
-* Async IO
-
 - Go's approach to async is blocking IO at goroutine level, not process!
 - goroutine ~= coroutine ~= green threads
 - Goroutine
+
+* Async IO
+
+.code async.go /START OMIT/,/END OMIT/
 
 * Async IO in POSIX world
 

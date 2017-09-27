@@ -8,8 +8,8 @@ import (
 )
 
 type TodoItem struct {
-	Priority int
-	Text     string
+	Priority int    `json:"priority"`
+	Text     string `json:"text"`
 }
 
 var todoList []TodoItem
