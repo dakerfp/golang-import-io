@@ -89,6 +89,10 @@ http://dakerfp.com
 
 * Think twice
 
+.code readll.go
+
+* Think twice
+
 - ioutil.ReadFile
 - ioutil.ReadAll
 - io.Pipe
